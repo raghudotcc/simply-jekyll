@@ -1,0 +1,43 @@
+title: Simply Jekyll
+name: Raghuveer S
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://www.raghuveer.net" # the base hostname & protocol for your site, e.g. http://example.com
+encoding: utf-8
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed 
+  - jekyll-sitemap 
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+collections:
+    notes:
+      output: true
+      permalink: /notes/:title
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /posts/:title
+      content-type: post
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: post
+      content-type: notes
