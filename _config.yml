@@ -1,5 +1,5 @@
 title: Simply Jekyll
-name: Raghuveer S
+name: John Doe
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://simply-jekyll.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
