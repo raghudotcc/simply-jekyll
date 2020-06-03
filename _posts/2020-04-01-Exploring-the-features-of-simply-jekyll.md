@@ -24,7 +24,7 @@ As for the list of features, this website steals features from every website tha
 - Omnisearch box at the top:  Google
 - Profile board:  Twitter/Instagram
 
-Now that you know all my secrets let us waste more time into further exposing my true nature in its entirety and get started with tour:
+Now that you know all my secrets let us not waste any more time into further exposing my true nature in its entirety and get started with tour:P
 
 {:.boxit}
 **Note:** This page only showcases the features. How to use these feature is mentioned in a separate article.
@@ -52,7 +52,7 @@ The first one on the right is a marginnote and the second one on the left is a s
 
 ### On-feed context menu
 
-Context menus are a great way to handle way to better way to improve user experience if they are done correctly. Given that our theme has a feed-link structure for the landing page, it leverages the opportunity and saves second time visitors who have already read the article and are only here to see other related articles or the backlinks by just simply right clicking on the feed. Thereby saving users the unnecessay time involved with clicking on a link and scrolling all the way down to see the backlinks or related articles.
+Context menus are a great way to improve user experience if they are done correctly. Given that our theme has a feed-link structure for the landing page, it leverages the opportunity and saves second time visitors who have already read the article and are only here to see other related articles or the backlinks by just simply right clicking on the feed. Thereby saving users the unnecessay time involved with clicking on a link and scrolling all the way down to see the backlinks or related articles.
 
 Here is a screenshot for people who are too lazy, while the rest of you can go back to the home page and try it out by right clicking on a particular feed entry:
 
