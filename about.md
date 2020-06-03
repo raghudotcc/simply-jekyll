@@ -2,6 +2,7 @@
 layout: post
 title: About
 permalink: /about/
+content-type: eg
 ---
 
 As of now, I am a programmer with expertise in System Programming (especially C++), who is also interested in Computer Graphics, Compiler Design, and Some Embedded Systems. [[Here::https://github.com/raghuveerdotnet]] is my coding scratchpad if you are interested.
