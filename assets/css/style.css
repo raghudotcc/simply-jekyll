@@ -823,9 +823,7 @@ hr {
 }
 
 blockquote .sn-left,
-blockquote .mn-left,
-li .sn-left,
-li .mn-left {
+blockquote .mn-left {
     float: left;
     clear: left;
     margin-left: -58%;
@@ -833,13 +831,29 @@ li .mn-left {
     text-align: left; 
 }
 
+li .sn-left,
+li .mn-left {
+    float: left;
+    clear: left;
+    margin-left: -53%;
+    width: 40%;
+    text-align: left; 
+}
+
 blockquote .sn-right,
-blockquote .mn-right,
+blockquote .mn-right {
+    float: right;
+    clear: right;
+    margin-right: -55% !important;
+    width: 40%;
+    text-align: left; 
+}
+
 li .sn-right,
 li .mn-right {
     float: right;
     clear: right;
-    margin-right: -58%;
+    margin-right: -45% !important;
     width: 40%;
     text-align: left; 
 }
@@ -1176,22 +1190,16 @@ label.srs-toggle {
     blockquote .mn-left,
     li .sn-left,
     li .mn-left {
-    float: left;
-    clear: left;
-    margin-left: -60%;
+    margin-left: -38%;
     width: 24% !important;
-    text-align: left; 
 }
 
     blockquote .sn-right,
     blockquote .mn-right,
     li .sn-right,
     li .mn-right {
-    float: right;
-    clear: right;
-    margin-right: -60%;
-    width: 24% !important;
-    text-align: left; 
+    margin-right: -30%;
+    width: 25% !important;
 }
     .box {
         border: none !important;
@@ -1210,6 +1218,31 @@ label.srs-toggle {
     margin-left: -35%;
     width: 30%;
 }
+
+blockquote .sn-left,
+blockquote .mn-left {
+    margin-left: -51% !important;
+    width: 30% !important;
+}
+
+li .sn-left,
+li .mn-left {
+margin-left: -43% !important;
+width: 30% !important;
+}
+
+blockquote .sn-right,
+blockquote .mn-right {
+    margin-right: -50% !important;
+    width: 30% !important;
+}
+
+li .sn-right,
+li .mn-right {
+margin-right: -35% !important;
+width: 30% !important;
+}
+
 .related-group {
     background-color: #ededed !important;
     margin-left: 10px;
@@ -1385,9 +1418,3 @@ label.margin-toggle:not(.sidenote-number) {
 }
 }
 
-
-/* DISQUS THREAD MARGIN OVERRIDE FOR LEGIBILITY, DO NOT TOUCH */
-#disqus_thread {
-    margin-left: 10px;
-    margin-right: 10px;
-}
