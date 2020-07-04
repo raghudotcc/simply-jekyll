@@ -33,7 +33,8 @@ Now that you know all my secrets let us not waste any more time into further exp
 
 Backlinks or as Roam Research calls it "Birdirectional Links" is a nifty little feature that allows not only users reading your essays/articles to encounter interesting related articles, this is something you as a author yourself will see how powerful it is once you start browsing around your website. Backlinks are basically a link on PostA indicating all the mentions of PostA on different Posts.
 
-The neat stuff is it won't show up with an empty box if a given post doesn't have any backlinks and if it is already included in backlinks, it won't show up in your related posts. :)
+The neat stuff is it won't show up with an empty box if a given post doesn't have any backlinks and if it is already included in backlinks, it won't show up in your related posts[[**Related Posts:** Posts that share same tag(s).<br> **Linked References(Backlinks):** Posts that link other posts inside your blog.::rmn]]. :)
+
 
 Here is a screenshot of what mentions/backlinks will look like in a page:
 
