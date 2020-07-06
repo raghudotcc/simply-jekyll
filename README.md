@@ -9,7 +9,7 @@ Simply Jekyll is a simple yet highly functional jekyll-based theme that combines
 
 Preview the template here: https://simply-jekyll.netlify.app/
 
-I wrote a tutorial explaining how to set it up: https://simply-jekyll.netlify.app/
+I wrote a tutorial explaining how to set it up: https://simply-jekyll.netlify.app/posts/how-to-setup-simply-jekyll
 
 - Based on Jekyll, a static website generator
 - Creates backlinks to other notes automatically
