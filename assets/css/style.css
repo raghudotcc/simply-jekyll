@@ -1418,3 +1418,8 @@ label.margin-toggle:not(.sidenote-number) {
 }
 }
 
+/* DISQUS THREAD MARGIN OVERRIDE FOR LEGIBILITY, DO NOT TOUCH */
+#disqus_thread {
+    margin-left: 10px;
+    margin-right: 10px;
+}

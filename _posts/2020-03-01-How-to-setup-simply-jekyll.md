@@ -1,6 +1,7 @@
 ---
 title: How to setup Simply Jekyll
 tags: jekyll theme
+comments: true
 ---
 
 This is going to be a super simple post about how to setup and use this theme for your own website.

@@ -32,6 +32,9 @@ collections:
       output: true
       permalink: /notes/:title
 
+disqus:
+  shortname: raghuveerdotnet
+
 defaults:
   - scope:
       path: ""

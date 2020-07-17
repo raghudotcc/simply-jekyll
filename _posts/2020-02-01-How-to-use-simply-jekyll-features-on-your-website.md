@@ -1,6 +1,7 @@
 ---
 title: How to use Simply Jekyll features on your website
 tags: jekyll theme
+comments: true
 ---
 
 Welcome to this feature usage tour. This is going to be another short post that describes how to use all the fancy features we saw in [[Exploring the features of Simply Jekyll]]. So without further ado, let's get started.

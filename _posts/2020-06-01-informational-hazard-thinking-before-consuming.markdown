@@ -1,6 +1,7 @@
 ---
 title: (Sample Essay) Informational Hazard - Thinking Before Consuming
 tags: Practical
+comments: true
 ---
 
 Information is probably the single most addictive substance, even more so than heroin in it can give you the kick even before you have consumed it, let alone waiting for the system to digest it. And what is more interesting is, the quality and the content(in chemist-speak, the composition, and the dosage) that is required to stimulate an individual varies for each individual. For some, the effect kicks in at “keeping up with Kardashians”; for some, when reading editorials in the economist or the new yorker; and for some, reading self-help claptrap disguised as psychology and science. Whichever end of the spectrum you are in there is not much difference in the effect it has on you – all it does is, it consumes your senses.
