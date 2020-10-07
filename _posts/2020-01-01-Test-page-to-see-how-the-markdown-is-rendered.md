@@ -13,6 +13,7 @@ This is intended as a quick reference and showcase.
 - [[Links::#links]]
 - [[Images::#images]]
 - [[Code and Syntax Highlighting::#syntax]]
+- [[Math Expressions:#math]]
 - [[Tables::#tables]]
 - [[Blockquotes::#blockquotes]]
 - [[Inline HTML::#inline]]
@@ -230,6 +231,20 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
+{:#math}
+### Math expressions
+---
+
+You can write math expressions using the $$\LateX$$ [markup language](https://en.wikipedia.org/wiki/LaTeX) between double dollar signs : \$$...$$. They can be written inline or as a single block.
+
+For example,
+
+\$$P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}$$ will render as :
+
+$$P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}$$
+
+Please note that for a math block to be displayed correctly, it needs to be separated by an empty line, above and below. Besides, the pipe character | may conflict with markdown : it is recommended to use \vert instead.
+
 {:#tables}
 ### Tables
 ---
@@ -381,5 +396,6 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+
 
 License: CC-BY
