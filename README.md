@@ -1,4 +1,4 @@
-# Arboretum v1.0.0
+# Arborio v1.0.0
 
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time.
@@ -14,7 +14,7 @@ A digital garden using a custom version of ``simply-jekyll``. It is more oriente
 
 ## How do I use this ?
 
-Go to [arborio.netlify.com](arborio.netlify.com) and follow the very nice guide written by [[raghuveerdotnet]] which I adapted for this fork.
+Go to [arborio.netlify.com](arborio.netlify.com) and follow the very nice guide written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
 
 Check [https://simply-jekyll.netlify.app/posts/how-to-use-simply-jekyll-features-on-your-website](https://simply-jekyll.netlify.app/posts/how-to-use-simply-jekyll-features-on-your-website) for more advanced features.
 
