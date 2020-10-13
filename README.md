@@ -30,7 +30,7 @@ Things to modify to make it yours (you can search it in github/'this repository`
     <meta content="{{ site.url }}/about/" property="article:author">
 ````
 
-- The favicon, profile and the bottom picture are here:
+- The favicon and profile are here:
 `assets/img/`
 
 - The main stuff is in ``\_config.yml`` :
