@@ -1,12 +1,12 @@
-title: arborio.netlify.com
+title: arborio.netlify.app
 name: Arborio
 user_description: Un jardin digital
-notes_url: "https://arborio.netlify.com/"
+notes_url: "https://arborio.netlify.app/"
 profile_pic: /assets/img/profile.png
 favicon: /assets/img/favicon.png
 copyright_name: MIT
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://arborio.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://arborio.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
 # Build settings
