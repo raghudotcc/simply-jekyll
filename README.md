@@ -3,8 +3,10 @@
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time.
 
+![screenshot](Screenshot.png)
+
 ## What is different ?
-- It is translated in french, because I take my note in my mother tongue. Check [arborio.netlify.com](arborio.netlify.com) if you want to translate it to your own langage.
+- It is translated in french, I indeed take my notes in my mother tongue. Check [arborio.netlify.com](arborio.netlify.com) if you want to translate it to your own langage.
 
 - I got rid of the `_posts/`, which I wasn't using and replaced them with `_notes`. Please write your essays in `_notes/`.
 
