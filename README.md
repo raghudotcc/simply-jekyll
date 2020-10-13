@@ -1,4 +1,4 @@
-# Arborio v1.0.0
+# Arborio
 
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time.
