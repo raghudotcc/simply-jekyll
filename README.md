@@ -1,12 +1,12 @@
-# Arborio v1.0.0
+# Arborio
 
 ## What is this ?
-A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time.
+A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
 ![screenshot](Screenshot.png)
 
 ## What is different ?
-- It is translated in french, I indeed take my notes in my mother tongue. Check [arborio.netlify.com](arborio.netlify.com) if you want to translate it to your own langage.
+- It is translated in french, I indeed take my notes in my mother tongue.
 
 - I got rid of the `_posts/`, which I wasn't using and replaced them with `_notes`. Please write your essays in `_notes/`.
 
@@ -30,7 +30,7 @@ Things to modify to make it yours (you can search it in github/'this repository`
     <meta content="{{ site.url }}/about/" property="article:author">
 ````
 
-- The favicon, profile and the bottom picture are here:
+- The favicon and profile are here:
 `assets/img/`
 
 - The main stuff is in ``\_config.yml`` :
