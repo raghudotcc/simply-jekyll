@@ -1,5 +1,5 @@
 # Arborio
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b37d412-1240-44dd-8539-a7001465b57a/deploy-status)](https://app.netlify.com/sites/arborio/deploys)
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
