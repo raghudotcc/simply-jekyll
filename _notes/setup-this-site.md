@@ -1,7 +1,6 @@
 ---
-title: How to setup Simply Jekyll
-tags: jekyll theme
-comments: true
+title: How to setup this site
+tags: Arborio
 ---
 
 This is going to be a super simple post about how to setup and use this theme for your own website.
@@ -36,7 +35,7 @@ Once you are all set with the prerequisites, we can then get to the fun part of 
 
 To simplify things, I provide the template showed in the image above to get started. You can always tweak this template to your taste later.
 
-Visit the GitHub page for my template repository ([[raghuveerdotnet/jekyll-seamless::https://github.com/raghuveerdotnet/jekyll-seamless]]), and fork it to your account using the Fork button:
+Visit the GitHub page for my template repository ([https://github.com/Maxence-L/arborio](https://github.com/Maxence-L/arborio)), and fork it to your account using the Fork button:
 
 > <img src="/assets/img/fork_button.jpg" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
 
@@ -53,7 +52,7 @@ $ git clone <YOUR_COPIED_URL_HERE> my-personal-website
 As a reference point, this is how it looks like for me (the difference is likely just the GitHub username):
 
 ```
-$ git clone git@github.com:raghuveerdotnet/jekyll-seamless.git my-personal-website
+$ git clone git@github.com/Maxence-L/arborio my-personal-website
 ```
 
 Then, navigate into the directory that was just created:
@@ -103,7 +102,7 @@ Once that’s done, your website should be available on the Internet via a gener
 
 Now the cool thing is this: whenever you push an update to your GitHub repository, Netlify will automatically deploy your updates to the Internet.
 
-### 5. Start producing content with your Simply Jekyll based Website
+### 5. Start producing content :
 
 At this point, you can start updating the files on your machine (in the my-personal-website folder) to change your jekyll seamless based website to your liking: update the copy, add some notes, tweak the layout, customize the colors, etc. Once you have something you’re happy with, push your changes to your GitHub repository with the following commands:
 
@@ -118,11 +117,4 @@ If that command succeeds and the rest of the tutorial was done correctly, in a c
 And we’re done! You now have your own Simply Jekyll based Personal Website .
 
 ---
-
-If you’re curious, take a look at [[my personal jekyll seamless based website here::https://www.raghuveer.net]].
-
-This setup tutorial is inspired by [[Maxime Vaillancourt::https://maximevaillancourt.com]]'s Digital Garden Tutorial.
-
-
-
 

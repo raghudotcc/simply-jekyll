@@ -39,7 +39,7 @@ body {
     border-left: 1px solid #f7f7f7;
     border-right: 1px solid #f7f7f7;
     border-bottom: 1px solid #f7f7f7;
-    width: 60%;
+    width: 80%;
     position: absolute;
     top: 0px;
 }
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 a, p, ul, li, ol, table, span, blockquote {
     color: #555555;
     font-family:  'IBM Plex Sans', Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;  /* Let's set the font-size to something old-man friendly */
+    font-size: 18px;  /* Let's set the font-size to something old-man friendly */
 }
 
 p a,
@@ -557,7 +557,8 @@ hr {
 }
 
 .boxit {
-
+    font-family:  'IBM Plex Sans', Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;  /* Let's set the font-size to something old-man friendly */
     padding: 20px;
     background-color: #f7f7f7;
     border-radius: 5px;
@@ -947,8 +948,10 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 .spaced-rep {
+    font-size: 20px;
     display: none;
 }
+
 
 input.srs-toggle {
     display: none; 
@@ -967,12 +970,13 @@ label.srs-toggle {
     vertical-align: baseline;
     position: relative; 
     padding: 12px;
-    width: 240px;
+    width: 300px;
     background-color: #fff;
     border: solid 1px #dfdfdf;
     border-radius: 5px;
     box-shadow: 1px 1px 15px #cfcfcf;
     word-wrap:break-word;
+    font-size: 20px;
 }
 
 .related {
@@ -993,6 +997,11 @@ label.srs-toggle {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+}
+
+img[src*='#center'] {
+    display: block;
+    margin: auto;
 }
 
 .related-group {

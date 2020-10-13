@@ -1,19 +1,19 @@
-title: Simply Jekyll
-name: John Doe
-user_description: Programmer (Interested in Philosophy and Math)
-notes_url: "https://simply-jekyll.netlify.app"
+title: arborio.netlify.com
+name: Arborio
+user_description: Un jardin digital
+notes_url: "https://arborio.netlify.com/"
 profile_pic: /assets/img/profile.png
 favicon: /assets/img/favicon.png
-copyright_name: John Doe
+copyright_name: MIT
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://simply-jekyll.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://arborio.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
 # Build settings
 theme: null
 plugins:
   - jekyll-feed 
-  - jekyll-sitemap 
+  - jekyll-sitemap
 
 markdown: kramdown
 
@@ -31,9 +31,6 @@ collections:
     notes:
       output: true
       permalink: /notes/:title
-
-disqus:
-  shortname: raghuveerdotnet
 
 defaults:
   - scope:

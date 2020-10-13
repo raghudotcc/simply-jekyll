@@ -5,3 +5,5 @@
 layout: post
 permalink: /
 ---
+
+![bannière](/assets/img/bottom-index.jpg)

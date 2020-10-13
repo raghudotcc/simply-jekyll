@@ -79,6 +79,7 @@ DEPENDENCIES
   jekyll (~> 4.0.0)
   jekyll-feed (~> 0.12)
   jekyll-sitemap
+  kramdown
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

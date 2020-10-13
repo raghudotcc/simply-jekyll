@@ -2,14 +2,14 @@
 ---
 
 [
-  {% for post in site.notes %}
+  {% for note in site.notes %}
     {
 
-      "title"    : "{{ post.title | strip_html | escape }}",
-      "url"      : "{{ post.url }}",
-      "category" : "{{post.categories | join: ', '}}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "content"  : {{ post.content | strip_html | strip_newline | strip | jsonify }}
+      "title"    : "{{ note.title | strip_html | escape }}",
+      "url"      : "{{ note.url }}",
+      "category" : "{{note.categories | join: ', '}}",
+      "tags"     : "{{ note.tags | join: ', ' }}",
+      "content"  : {{ note.content | strip_html | strip_newline | strip | jsonify }}
 
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
