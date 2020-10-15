@@ -114,7 +114,7 @@ $ git push origin master
 
 If that command succeeds and the rest of the tutorial was done correctly, in a couple of minutes, you should see your changes live on your Netlify website. 🚀
 
-And we’re done! You now have your own Simply Jekyll based Personal Website .
+And we’re done! You now have your own Arborio based Personal Website .
 
 ---
 
