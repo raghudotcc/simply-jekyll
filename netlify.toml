@@ -10,3 +10,7 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+     
+[build]
+  publish = "_site"
+  command = "jekyll build
