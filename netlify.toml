@@ -11,6 +11,6 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
      
-[build]
+[[build]]
   publish = "_site"
   command = "jekyll build
