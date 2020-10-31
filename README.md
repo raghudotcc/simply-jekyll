@@ -1,7 +1,7 @@
-# Arborio
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7b37d412-1240-44dd-8539-a7001465b57a/deploy-status)](https://app.netlify.com/sites/arborio/deploys)
+# Notenote.link
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b37d412-1240-44dd-8539-a7001465b57a/deploy-status)](https://app.netlify.com/sites/notenotelink/deploys)
 ## What is this ?
-A digital garden using a custom version of ``simply-jekyll``, optimised for integration with Obsidian. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
+A digital garden using a custom version of ``simply-jekyll``, optimised for integration with [Obsidian](https://obsidian.md). It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
 ![screenshot](/assets/img/screenshot.png)
 
@@ -19,8 +19,10 @@ A digital garden using a custom version of ``simply-jekyll``, optimised for inte
 
 ## How do I use this ?
 
-Go to [notenotelink.netlify.com](https://notenotelink.netlify.com) and follow the very nice guide ('How to setup this site') written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Maxence-L/notenote.link)
 
+Go to [notenotelink.netlify.com](https://notenotelink.netlify.com) and follow the very nice guide ('How to setup this site') written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
+ 
 ## How do I customize this for my needs ?
 
 Things to modify to make it yours (you can search it in github/'this repository`) :
