@@ -13,4 +13,4 @@
 
 [build]
   publish = "_site"
-  command = "jekyll build
+  command = "jekyll build"
