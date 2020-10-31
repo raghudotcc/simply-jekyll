@@ -3,7 +3,7 @@
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``, optimised for integration with Obsidian. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
-![screenshot](Screenshot.png)
+![screenshot](/assets/img/screenshot.png)
 
 ## What is different ?
 
