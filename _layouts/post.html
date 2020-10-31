@@ -5,8 +5,8 @@
 <html lang="fr">
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Arborio" property="og:site_name"/>
-    <meta content="Un jardin digital" property="og:description">
+    <meta content="My linked notebook" property="og:site_name"/>
+    <meta content="My path to perpetual learning." property="og:description">
     <meta content="{{ site.url }}/about/" property="article:author">
 
 
@@ -55,6 +55,7 @@
             <main>
                 <h1>{{page.title}}</h1>
                 {%- include content.html -%}
+                <hr>
                 {%- include backlinks.html -%}
                 {%- include related.html -%}
             </main>

@@ -1,27 +1,25 @@
 # Arborio
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7b37d412-1240-44dd-8539-a7001465b57a/deploy-status)](https://app.netlify.com/sites/arborio/deploys)
 ## What is this ?
-A digital garden using a custom version of ``simply-jekyll``. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
+A digital garden using a custom version of ``simply-jekyll``, optimised for integration with Obsidian. It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
 ![screenshot](Screenshot.png)
 
 ## What is different ?
-- It is translated in french, I indeed take my notes in my mother tongue.
 
-- I got rid of the `_posts/`, which I wasn't using and replaced them with `_notes`. Please write your essays in `_notes/`.
+- Markdown is fully-compatible with Obsidian (including Latex delimiters !)
 
-- Some cosmetic changes have been made for better readability. Wider page, larger font.
+- There are now only notes (no blog posts).
 
-- There are no comments anymore
+- There are cosmetic changes (ADHD-friendly code highlighting, larger font, larger page)
+
+- Code is now correctly indented
+
+- Wikilinks, but also alt-text wikilinks (with transclusion !) are usable.
 
 ## How do I use this ?
 
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Maxence-L/arborio)
-
-Go to [arborio.netlify.com](https://arborio.netlify.com) and follow the very nice guide written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
-
-Check [https://simply-jekyll.netlify.app/posts/how-to-use-simply-jekyll-features-on-your-website](https://simply-jekyll.netlify.app/posts/how-to-use-simply-jekyll-features-on-your-website) for more advanced features.
+Go to [notenotelink.netlify.com](https://notenotelink.netlify.com) and follow the very nice guide ('How to setup this site') written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
 
 ## How do I customize this for my needs ?
 
@@ -29,8 +27,7 @@ Things to modify to make it yours (you can search it in github/'this repository`
 
 - Meta content in `_layouts/post.html`:
 ````html
-    <meta content="Un jardin digital" property="og:description">
-    <meta content="{{ site.url }}/about/" property="article:author">
+    <meta content="My linked notebook" property="og:site_name"/>
 ````
 
 - The favicon and profile are here:
@@ -38,19 +35,17 @@ Things to modify to make it yours (you can search it in github/'this repository`
 
 - The main stuff is in ``\_config.yml`` :
 ````yaml
-title: arborio.netlify.com
-name: Arborio
-user_description: Un jardin digital
-notes_url: "https://arborio.netlify.com/"
+title: notenotelink.netlify.com
+name: notenote.link
+user_description: My linked notebook
+notes_url: "https://notenotelink.netlify.com/"
 profile_pic: /assets/img/profile.png
 favicon: /assets/img/favicon.png
 copyright_name: MIT
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://arborio.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://notenotelink.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 ````
-
-- There's some lorem ipsum in `\aboud.md` to replace
 
 - You may want to change the copyright in `_includes/footer.html`:
 ```html
@@ -58,9 +53,4 @@ encoding: utf-8
 ```
 ## What's coming ?
 
-I'll try to add a way to change internal link's rendered text. For instance : [[link to note|text that you see]].
-
-
-
-
-
+Open-transclude integration in the template, if possible.

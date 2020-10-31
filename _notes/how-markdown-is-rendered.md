@@ -1,7 +1,7 @@
 ---
 title: Test page to see how the raw markdown is rendered
 tags: markdown 
-comments: true
+season: summer
 ---
 
 This is intended as a quick reference and showcase. 
@@ -13,7 +13,7 @@ This is intended as a quick reference and showcase.
 - [[Links::#links]]
 - [[Images::#images]]
 - [[Code and Syntax Highlighting::#syntax]]
-- [[Math Expressions::#math-expressions]]
+- [[Math Expressions::#math]]
 - [[Tables::#tables]]
 - [[Blockquotes::#blockquotes]]
 - [[Inline HTML::#inline]]
@@ -175,12 +175,32 @@ Reference-style:
 Here's our logo (hover to see the title text):
 
 Inline-style: 
+
+```
+![alt text](/assets/img/profile.png "Logo Title Text 1")
+```
+
 ![alt text](/assets/img/profile.png "Logo Title Text 1")
 
 Reference-style: 
+
+```
+![alt text][logo]
+ 
+ [logo]: /assets/img/profile.png "Logo Title Text 2"
+```
+
 ![alt text][logo]
 
 [logo]: /assets/img/profile.png "Logo Title Text 2"
+
+You can center the picture by adding `#center` at the end of the image path :
+
+```
+![alt text](/assets/img/profile.png#center "Logo Title Text 1")
+```
+
+![alt text](/assets/img/profile.png#center "Logo Title Text 1")
 
 {:#syntax}
 ### Code and Syntax Highlighting
@@ -231,21 +251,39 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
-{:#math-expressions}
-### Math Expressions
+{:#math}
+### Math expressions
 ---
 
-You can write math expressions using the LaTeX [markup language](https://en.wikipedia.org/wiki/LaTeX) between double dollar signs : `$$...$$`. They can be written inline or as a single block.
+You can write math expressions using the Latex [markup language](https://en.wikipedia.org/wiki/LaTeX) between dollar signs. 
+
+They can be written inline (single-dollar signs `$...$`) or as a whole block (double dollar signs with a line above and under `$$...$$`).
 
 For example,
+```
+Bayes Theorem is $P(A \vert B) = \frac{P(B \vert A)\cdot P(A)}{P(B)}$
+```
+will render as :
 
-`$$P(A\vertB) = \frac{P(B \vert A)\cdot P(A)}{P(B)}$$` will render as :
+Bayes Theorem is : $P(A \vert B) = \frac{P(B \vert A)\cdot P(A)}{P(B)}$
 
-$$
-P(A \vert B) = \frac{P(B \vert A)\cdot P(A)}{P(B)}
-$$
+Whereas
 
-Please note that for a math block to be displayed correctly, it needs to be separated by an empty line, above and below. Besides, the pipe character `|`may conflict with markdown : it is recommended to use `\vert` instead.
+```
+Bayes Theorem is :
+
+$$P(A \vert B) = \frac{P(B \vert A)\cdot P(A)}{P(B)}$$
+
+````
+
+will render as :
+
+Bayes Theorem is :
+
+$$P(A \vert B) = \frac{P(B \vert A)\cdot P(A)}{P(B)}$$
+
+
+Please note that for a math block to be displayed correctly, it needs to be separated by an empty line, above and below. Besides, the pipe character \| may conflict with Markdown : it is recommended to use \vert instead.
 
 {:#tables}
 ### Tables
@@ -398,3 +436,6 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+
+
+License: CC-BY

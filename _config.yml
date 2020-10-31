@@ -1,12 +1,12 @@
-title: arborio.netlify.app
-name: Arborio
-user_description: Un jardin digital
-notes_url: "https://arborio.netlify.app"
+title: notenote.link
+name: My linked notebook
+user_description: notenote.link
+notes_url: "https://notenote.link.netlify.app"
 profile_pic: /assets/img/profile.png
 favicon: /assets/img/favicon.png
 copyright_name: MIT
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://arborio.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://notenote.link.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
 # Build settings
@@ -14,15 +14,17 @@ theme: null
 plugins:
   - jekyll-feed 
   - jekyll-sitemap
+  - jekyll-toc
 
 markdown: kramdown
 
 kramdown:
   input: GFM
   hard_wrap: false
-  math_engine: mathjax
+  math_engine: null
   smart_quotes: ["apos", "apos", "quot", "quot"]
   syntax_highlighter: rouge
+
 
 sass:
   style: compressed
@@ -31,6 +33,9 @@ collections:
     notes:
       output: true
       permalink: /notes/:title
+
+toc:
+  max_level: 3
 
 defaults:
   - scope:

@@ -1,20 +1,10 @@
 ---
 title: How to setup this site
-tags: Arborio
+tags: Theme
+season : summer
 ---
 
 This is going to be a super simple post about how to setup and use this theme for your own website.
-
-## Usage
-
-{:.boxit}
-Q. What will it look like when I am done setting it up?
-
-> This is what it should look  (minus the exact essays ofcourse):
-> <img src="/assets/img/end_result.jpg" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
-
-
-Now without further ado, let's get started!
 
 ### Setup Prerequisites
 
@@ -35,7 +25,7 @@ Once you are all set with the prerequisites, we can then get to the fun part of 
 
 To simplify things, I provide the template showed in the image above to get started. You can always tweak this template to your taste later.
 
-Visit the GitHub page for my template repository ([https://github.com/Maxence-L/arborio](https://github.com/Maxence-L/arborio)), and fork it to your account using the Fork button:
+Visit the GitHub page for my template repository [[Maxence-L/notenote.link::https://github.com/Maxence-L/notenote.link]], and fork it to your account using the Fork button:
 
 > <img src="/assets/img/fork_button.jpg" style="box-shadow: 2px 2px 20px 0 #ddd;"/>
 
@@ -52,7 +42,7 @@ $ git clone <YOUR_COPIED_URL_HERE> my-personal-website
 As a reference point, this is how it looks like for me (the difference is likely just the GitHub username):
 
 ```
-$ git clone git@github.com/Maxence-L/arborio my-personal-website
+$ git clone git@github.com/Maxence-L/notenote.link my-personal-website
 ```
 
 Then, navigate into the directory that was just created:
@@ -77,7 +67,7 @@ $ bundle exec jekyll serve
 
 Then, open up [[http://localhost:4000::http://localhost:4000]] in your browser.
 
-If everything’s done correctly, you should now see the home page of your Personal Jekyll Website with Simply Jekyll Theme. 🎉
+If everything’s done correctly, you should now see the home page of your Personal Jekyll Website with notenote.link Theme. 🎉
 
 Keep in mind that this site is only available locally (notice the `localhost` part of the URL), so if we want it to be available on the Internet for everyone to enjoy, we need to deploy it to the Internet: we’ll use Netlify for that in the next step.
 
@@ -114,7 +104,5 @@ $ git push origin master
 
 If that command succeeds and the rest of the tutorial was done correctly, in a couple of minutes, you should see your changes live on your Netlify website. 🚀
 
-And we’re done! You now have your own Arborio based Personal Website .
-
----
+And we’re done! You now have your own notenote.link based Personal Website .
 
