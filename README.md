@@ -27,7 +27,7 @@ Go to [notenotelink.netlify.com](https://notenotelink.netlify.com) and follow th
 
 ## How can I participate ?
 
-Open an issue to share feedback or propose features. Star it 🌟 if you like it !
+Open an issue to share feedback or propose features. Star the repo if you like it ! 🌟
 
 ## How do I customize this for my needs ?
 
