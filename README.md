@@ -24,7 +24,11 @@ Issues are welcome, including feedback ! Don't hesitate to ask if you can't find
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Maxence-L/notenote.link)
 
 Go to [notenotelink.netlify.com](https://notenotelink.netlify.com) and follow the very nice guide ('How to setup this site') written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
- 
+
+## How can I participate ?
+
+Open an issue to share feedback or propose features. Star it 🌟 if you like it !
+
 ## How do I customize this for my needs ?
 
 Things to modify to make it yours (you can search it in github/'this repository`) :
