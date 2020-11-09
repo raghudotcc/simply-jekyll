@@ -3,9 +3,15 @@
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``, optimised for integration with [Obsidian](https://obsidian.md). It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
+**Demo is here : [notenote.link](https://notenotelink.netlify.com)**
+
 Issues are welcome, including feedback ! Don't hesitate to ask if you can't find a solution. 💫
 
 ![screenshot](/assets/img/screenshot.png)
+
+
+
+You can check my personnal notebook (in french) to see how it scales : [arboretum.link](https://arboretum.link)
 
 ## What is different ?
 
@@ -23,7 +29,7 @@ Issues are welcome, including feedback ! Don't hesitate to ask if you can't find
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Maxence-L/notenote.link)
 
-Go to [notenotelink.netlify.com](https://notenotelink.netlify.com) and follow the very nice guide ('How to setup this site') written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
+Go to  and follow [the very nice guide](https://notenote.link/notes/how-to-setup-this-site) written by [raghuveerdotnet](https://github.com/raghuveerdotnet) which I adapted for this fork.
 
 ## How can I participate ?
 
