@@ -89,4 +89,4 @@ In command-line, you can run `bundle exec jekyll serve` and go to `localhost:400
 ## What's coming ?
 
 - [Open-transclude](https://subpixel.space/entries/open-transclude/) integration in the template, if possible.
-- Different themes !
+- Different themes ! - Please tell me which you'd like to have !
