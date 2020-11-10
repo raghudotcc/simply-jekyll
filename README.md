@@ -3,7 +3,7 @@
 ## What is this ?
 A digital garden using a custom version of ``simply-jekyll``, optimised for integration with [Obsidian](https://obsidian.md). It is more oriented on note-taking and aims to help you build a nice knowledge base that can scale with time. 
 
-**Demo is here : [notenote.link](https://notenotelink.netlify.com)**
+**Demo is here : [notenote.link](https://notenote.link)**
 
 Issues are welcome, including feedback ! Don't hesitate to ask if you can't find a solution. 💫
 
