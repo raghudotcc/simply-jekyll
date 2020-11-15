@@ -18,11 +18,11 @@ You can check my personal notebook (in French) to see how it scales: [arboretum.
 
 ## What is different?
 
-- Markdown is fully-compatible with Obsidian (including Latex delimiters !)
+- Markdown is fully-compatible with Obsidian (including Latex delimiters!)
 - There are now only notes (no blog posts).
 - There are cosmetic changes (ADHD-friendly code highlighting, larger font, larger page)
 - Code is now correctly indented
-- Wikilinks, but also alt-text wikilinks (with transclusion !) are usable.
+- Wikilinks, but also alt-text wikilinks (with transclusion!) are usable.
 
 ## How do I use this?
 
@@ -64,7 +64,7 @@ Things to modify to make it yours (you can search it in github/'this repository`
 
 ## How do I remove the "seasons" feature for the notes?
 
-Delete what's inside [\_includes\feed.html](_includes/feed.html and replace it with:
+Delete what's inside [\_includes\feed.html](_includes/feed.html) and replace it with:
 
 ```liquid
 {%- if page.permalink == "/" -%}
