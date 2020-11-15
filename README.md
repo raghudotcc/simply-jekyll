@@ -34,20 +34,21 @@ Follow the [How to setup this site](https://notenote.link/notes/how-to-setup-thi
 
 Open an issue to share feedback or propose features. Star the repo if you like it ! 🌟
 
-## How do I customize this for my needs ?
+## How do I customize this for my needs?
 
-Things to modify to make it yours (you can search it in github/'this repository`) :
+Things to modify to make it yours:
 
 - Meta content in [\_layouts/post.html](_layouts/post.html):
     ```html
     <meta content="My linked notebook" property="og:site_name"/>
     ```
 - The favicon and profile are here: [assets/img/](assets/img/)
-- The main stuff is in `_config.yml`:
+- The main stuff is in [\_config.yml](_config.yml):
     ```yaml
     title: notenotelink.netlify.com
     name: notenote.link
     user_description: My linked notebook
+
     notes_url: "https://notenotelink.netlify.com/"
     profile_pic: /assets/img/profile.png
     favicon: /assets/img/favicon.png
@@ -57,7 +58,7 @@ Things to modify to make it yours (you can search it in github/'this repository`
     url: "https://notenotelink.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
     encoding: utf-8
     ```
-- You may want to change the copyright in `_includes/footer.html`:
+- You may want to change the copyright in [\_includes/footer.html](_includes/footer.html):
    ```html
    <p id="copyright-notice">Licence MIT</p>
    ```
@@ -70,16 +71,16 @@ Delete what's inside [\_includes\feed.html](_includes/feed.html) and replace it 
 {%- if page.permalink == "/" -%}
     {%- for item in site.notes -%}
         <div class="feed-title-excerpt-block disable-select" data-url="{{site.url}}{{item.url}}">
-            <a href="{{item.url}}" style="text-decoration: none; color: #555555;">
+            <a href="{{ item.url }}" style="text-decoration: none; color: #555555;">
             {%- if item.status == "Ongoing" or item.status == "ongoing" -%}
-            <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
-            <li style="padding: 0 5px; border-radius: 10px;" class="tag"><b>Status: </b>{{item.status | capitalize }}</li>
-            </ul>
-            <p style="margin-top: 0px;" class="feed-title">{{ item.title }}</p>
+                <ul style="padding-left: 20px; margin-top: 20px;" class="tags">
+                    <li style="padding: 0 5px; border-radius: 10px;" class="tag"><b>Status: </b>{{item.status | capitalize }}</li>
+                </ul>
+                <p style="margin-top: 0px;" class="feed-title">{{ item.title }}</p>
             {%- else -%}
-            <p class="feed-title">{{ item.title }}</p>
+                <p class="feed-title">{{ item.title }}</p>
             {%- endif -%}
-            <p class="feed-excerpt">{{ item.content | strip_html | strip | escape | truncate: 200}}</p>
+                <p class="feed-excerpt">{{ item.content | strip_html | strip | escape | truncate: 200}}</p>
             </a>
         </div>
     {%- endfor -%}
