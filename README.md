@@ -13,7 +13,6 @@ Issues are welcome, including feedback ! Don't hesitate to ask if you can't find
 
 ![screenshot](/assets/img/screenshot.png)
 
-
 You can check my personal notebook (in French) to see how it scales: [arboretum.link](https://arboretum.link)
 
 ## What is different?
@@ -32,7 +31,7 @@ Follow the [How to setup this site](https://notenote.link/notes/how-to-setup-thi
 
 ## How can I participate?
 
-Open an issue to share feedback or propose features. Star the repo if you like it ! 🌟
+Open an issue to share feedback or propose features. Star the repo if you like it! 🌟
 
 ## How do I customize this for my needs?
 
@@ -65,7 +64,7 @@ Things to modify to make it yours:
 
 ## How do I remove the "seasons" feature for the notes?
 
-Delete what's inside [\_includes\feed.html](_includes/feed.html) and replace it with:
+Delete what's inside [\_includes/feed.html](_includes/feed.html) and replace it with:
 
 ```liquid
 {%- if page.permalink == "/" -%}
