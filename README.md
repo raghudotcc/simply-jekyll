@@ -1,3 +1,15 @@
+# [Archived] Simply Jekyll - A simple jekyll theme
+
+### This repo is no longer maintained, but you can still use it in its current form
+
+Please note that you can still fork/star this repository and use it in its current form, but there will not be any active development in this repo going forward. 
+
+The reason for this decision is the development of my own "home-made" SSG(Static Site Generator). I have moved completely to my own static site generator that I developed using Rust and will be using that instead of any of the "off-the-shelf" SSGs like Jekyll, Hugo, Gatsby etc. 
+
+The custom SSG that I am talking about here is pretty hacky and very usecase specific, so I have not shared it yet publicly, but if there is enough interest among the users of "Simply-Jekyll" I will try to refine it and opensource it here on GitHub.
+
+---
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/42c75d17-5f01-4aea-9da3-4538ba92122e/deploy-status)](https://app.netlify.com/sites/simply-jekyll/deploys)
 <a href="https://jekyll-themes.com">
     <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
