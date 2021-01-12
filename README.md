@@ -9,11 +9,11 @@ A digital garden using a custom version of `simply-jekyll`, optimised for integr
 
 **Demo is here: [notenote.link](https://notenote.link)**
 
+If you want to see a more refined example, you can check my notes (in french) at [arboretum.link](https://www.arboretum.link/). Build time is approx. 15 seconds, FYI.
+
 Issues are welcome, including feedback ! Don't hesitate to ask if you can't find a solution. 💫
 
 ![screenshot](/assets/img/screenshot.png)
-
-You can check my personal notebook (in French) to see how it scales: [arboretum.link](https://arboretum.link)
 
 ## What is different?
 
