@@ -1459,3 +1459,10 @@ label.margin-toggle:not(.sidenote-number) {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+[id] > a {
+    display: none;
+}
+[id]:hover > a {
+    display: inline;
+}

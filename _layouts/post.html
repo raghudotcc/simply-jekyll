@@ -77,3 +77,10 @@
 
 
 </html>
+
+{%- if page.content-type == "notes"
+or page.content-type == "post" -%}
+{%- if page.title != "Tags" -%}
+<script>for(let h of document.querySelectorAll('h2[id],h3[id],h4[id]'))h.innerHTML+=` <a href="#${h.id}" aria-hidden="true">#</a>`</script>
+{%- endif -%}
+{%- endif -%}

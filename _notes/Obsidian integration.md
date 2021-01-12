@@ -20,9 +20,15 @@ Things to know :
 
 - Wikilinks are usable : **[​[**​...**]]**,
 
-- Also alt-text wikilinks (with transclusion !): **[​[**​original link\\|alternative text**]]**
+- Also alt-text wikilinks (with transclusion !) : **[​[**​original link\\|alternative text**]]**
 
-Please note that you need to escape the pipe character in Obsidian (\\| instead of \|). This won't break Obsidian's functionality.
+Please note : You need to escape the pipe character in Obsidian (\\| instead of \|). This won't break Obsidian's functionality.
+
+- **Fresh new feature** : you can also link headers ! Use # when typing the wikilink : **[​[**Obsidian integration#Obsidian setup\|Alt-text**]]** will create the following link : [[Obsidian integration#Obsidian setup\|Alt-text]] (click on it to see the effect)
+
+Please note : This feature will work only if you write alternative text in the link : [[Obsidian integration#Obsidian setup]] won't work[^1]. 
+
+[^1]: I don't use it, so I didn't change it but if it's important for you open an issue and I may fix it.
 
 - You can use [[Simply-Jekyll custom features::https://simply-jekyll.netlify.app/posts/exploring-the-features-of-simply-jekyll]], such as flashcards : [[flashcards !::srs]] - but don't click on it in Obsidian, else it will create a new page.
 
@@ -67,3 +73,5 @@ Images are the tricky part :
 - You can drag/drop/paste images in Obsidian, which will create a link such as : `[​[​../assets/img/Pasted image.png]]`
 
 A quick hack in the last case is just to change the brackets : `![](../assets/img/Pasted image.png)`
+
+
