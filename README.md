@@ -2,6 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7b37d412-1240-44dd-8539-a7001465b57a/deploy-status)](https://app.netlify.com/sites/notenotelink/deploys)
 
+## Update !
+
+Hi everyone ! I recently updated the template so that you can now link headers : [[note#header\|title]], which is done natively in Obsidian. Besides, there are now header links that appear on hover. As my notes get longer and longer, this functionnality became very necessary for meaningful linkings. If you see a bug, please open an issue about it !
 
 ## What is this?
 
