@@ -10,7 +10,7 @@ url: "https://notenote.link.netlify.app/" # the base hostname & protocol for you
 encoding: utf-8
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: null
 plugins:
   - jekyll-feed 
   - jekyll-sitemap
