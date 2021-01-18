@@ -32,7 +32,7 @@ Issues are welcome, including feedback ! Don't hesitate to ask if you can't find
 
 Follow the [How to setup this site](https://notenote.link/notes/how-to-setup-this-site) guide, written by [raghuveerdotnet](https://github.com/raghuveerdotnet) and then adapted for this fork.
 
-If you want to use it with Github Pages, it is possible, [please read this].
+If you want to use it with Github Pages, it is possible, [please read this](https://github.com/Maxence-L/notenote.link/issues/5#issuecomment-762508069).
 
 ## How can I participate?
 
