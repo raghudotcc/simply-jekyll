@@ -28,6 +28,8 @@ Issues are welcome, including feedback ! Don't hesitate to ask if you can't find
 
 ## How do I use this?
 
+You can click on this link and let the deploy-to-netlify-for-free-script do the rest !
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Maxence-L/notenote.link)
 
 Follow the [How to setup this site](https://notenote.link/notes/how-to-setup-this-site) guide, written by [raghuveerdotnet](https://github.com/raghuveerdotnet) and then adapted for this fork.
