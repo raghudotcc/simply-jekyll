@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
-![simply_jekyll](https://user-images.githubusercontent.com/24671386/112722912-03cf8300-8f32-11eb-93b2-a51e1eee6f0d.png)
+![simply_jekyll](https://user-images.githubusercontent.com/24671386/112729246-3a68c600-8f51-11eb-98d5-8184f402b783.png)
 
 
 Simply Jekyll is a simple yet highly functional jekyll-based theme that combines the best of different worlds (atleast tries to 😅). It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.
