@@ -6,8 +6,6 @@
     <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
 </a>
 
-# Simply Jekyll - A simple jekyll theme
-
 ![simply_jekyll](https://user-images.githubusercontent.com/24671386/112722912-03cf8300-8f32-11eb-93b2-a51e1eee6f0d.png)
 
 
