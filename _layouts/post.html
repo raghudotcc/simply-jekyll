@@ -1,6 +1,31 @@
 ---
 ---
 
+<!-------------------------------------------------------------------------------------
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+------------------------------------------------------------------------------------>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +43,14 @@
     <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {%- endif -%}
 
-    <title>{{site.title}}</title>
+    <title>{{site.heading}}</title>
 
     <link rel="canonical" href="{{site.url}}{{page.url}}"/>
-    <link rel="apple-touch-icon" href="{{site.profile_pic}}">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
-
-    <link rel="icon" href="{{site.favicon}}" type="image/png" sizes="16x16"/>
-    <link href="/assets/css/style.css" rel="stylesheet" media="all" class="default"/>
-
+    <link rel="apple-touch-icon" href="/assets/img/profile.png">
+    <link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="16x16"/>
+    <link href="/assets/css/Style.css" rel="stylesheet" media="all" class="default" />
+    <link href="/assets/css/Util.css" rel="stylesheet" media="all" class="default" />
+	<link href="/assets/css/vendor/Katex.css" rel="stylesheet" media="all" class="default"/>
     <!--[if IE]>
         <link href="/assets/css/ie-target.css" rel="stylesheet" type="text/css"/>
     <![endif]-->
@@ -37,30 +61,29 @@
 <body>
     <div class="container">                    
         <div class = "box">
-            {%- include header.html -%}
-            {%- include feed.html -%}
+            {%- include Header.html -%}
+            {%- include Feed.html -%}
 
             {%- if page.content-type == "notes" 
-                or page.content-type == "post" 
-                or page.content-type == "eg" -%}
+                or page.content-type == "post"  -%}
             <main>
                 <h1>{{page.title}}</h1>
-                {%- include content.html -%}
-                {%- include backlinks.html -%}
-                {%- include related.html -%}
+                {%- include Content.html -%}
+                {%- include Backlinks.html -%}
+                {%- include Related.html -%}
             </main>
             {%- endif -%}
-            {%- include comments.html -%}
-            {%- include footer.html -%}
+            {%- if page.content-type == "eg" -%}
+            <main>
+                <h1>{{page.title}}</h1>
+                {%- include Content.html -%}
+            </main>
+            {%- endif -%}
+            {%- include Comments.html -%}
+            {%- include Footer.html -%}
         </div>
-        <button class="scroll-to-top" id="scroll-to-top"><i class="fa fa-chevron-up"></i></button>
     </div>
-    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script>
-        document.getElementById("scroll-to-top").addEventListener("click", function() {
-            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-        });
-    </script>
-    {%- include contextmenu.html -%}
+    <!-- Load KaTeX -->
+	{%- include ContextMenu.html -%}
 </body>
 </html>

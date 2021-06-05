@@ -1,0 +1,270 @@
+---
+layout: Stylesheet
+---
+
+/* Utilities: Disable Selection, Kramdown TOC */
+
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.very-small {
+    font-size: 12px !important;
+}
+
+.medium-small {
+    font-size: 13.5px !important;
+}
+
+.small {
+    font-size: 16px !important;
+}
+
+.small-medium {
+    font-size: 18px !important;
+}
+
+.medium {
+    font-size: 22px !important;
+}
+
+.medium-large {
+    font-size: 25px !important;
+}
+
+.large {
+    font-size: 28px !important;
+}
+
+.serif {
+    font-family: Georgia, serif !important;
+}
+
+.title-sans {
+    font-family: var(--primary-font-family) !important;
+}
+
+.regular-sans {
+    font-family: var(--secondary-font-family) !important;
+}
+
+.bold {
+    font-weight: 600 !important;
+}
+
+.very-bold {
+    font-weight: 800 !important;
+}
+
+.bolder {
+    font-weight: 500 !important;
+}
+
+.normal {
+    font-weight: 400 !important;
+}
+
+.regular {
+    font-style: normal !important;
+}
+
+.oblique {
+    font-style: oblique !important;
+}
+
+.italic {
+    font-style: italic !important;
+}
+
+.left-align-text {
+    text-align: left !important;
+}
+
+.center-align-text {
+    text-align: center;
+}
+
+.right-align-text {
+    text-align: right;
+}
+
+.dont-decorate a {
+    text-decoration: none !important;
+    color: var(--primary-text-color) !important;
+}
+
+.dont-decorate {
+    background: rgb(242,242,242); 
+    background: linear-gradient(180deg, rgba(242,242,242,1) 15%, rgba(245,245,245,1) 54%, rgba(253,253,253,1) 100%); 
+}
+
+.boxit {
+    padding: 20px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+}
+
+#boxit {
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.default-color {
+    color: var(--primary-text-color) !important;
+}
+
+.default-background {
+    background-color: var(--secondary-bg-color) !important;
+}
+
+.show {
+    display: block  !important;
+}
+
+.hide {
+    display: none  !important;
+}
+
+.dim-90 {
+    opacity: 0.9  !important;
+}
+
+.dim-80 {
+    opacity: 0.8  !important;
+}
+
+.dim-70 {
+    opacity: 0.7  !important;
+}
+
+.dim-60 {
+    opacity: 0.6  !important;
+}
+
+.dim-50 {
+    opacity: 0.5  !important;
+}
+
+.dim-40 {
+    opacity: 0.4  !important;
+}
+
+.dim-30 {
+    opacity: 0.3  !important;
+}
+
+.dim-20 {
+    opacity: 0.2  !important;
+}
+
+.dim-10 {
+    opacity: 0.1  !important;
+}
+
+/* Margin Top Positive */
+
+.margin-top-5 {
+    margin-top: 5px  !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px  !important;
+}
+
+.margin-top-15 {
+    margin-top: 15px  !important;
+}
+
+.margin-top-20 {
+    margin-top: 20px  !important;
+}
+
+.margin-top-25 {
+    margin-top: 25px  !important;
+}
+
+.margin-top-30 {
+    margin-top: 30px  !important;
+}
+
+/* Margin Top Negative */
+
+.margin-top-5-neg {
+    margin-top: -5px  !important;
+}
+
+.margin-top-10-neg {
+    margin-top: -10px  !important;
+}
+
+.margin-top-15-neg {
+    margin-top: -15px  !important;
+}
+
+.margin-top-20-neg {
+    margin-top: -20px  !important;
+}
+
+.margin-top-25-neg {
+    margin-top: -25px  !important;
+}
+
+.margin-top-30-neg {
+    margin-top: -30px  !important;
+}
+
+/* Margin Bottom Positive */
+
+.margin-bottom-5 {
+    margin-top: 5px  !important;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px  !important;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px  !important;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px  !important;
+}
+
+.margin-bottom-25 {
+    margin-bottom: 25px  !important;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px  !important;
+}
+
+/* Margin Bottom Negative */
+
+.margin-bottom-5-neg {
+    margin-top: -5px  !important;
+}
+
+.margin-bottom-10-neg {
+    margin-bottom: -10px  !important;
+}
+
+.margin-bottom-15-neg {
+    margin-bottom: -15px  !important;
+}
+
+.margin-bottom-20-neg {
+    margin-bottom: -20px  !important;
+}
+
+.margin-bottom-25-neg {
+    margin-bottom: -25px  !important;
+}
+
+.margin-bottom-30-neg {
+    margin-bottom: -30px  !important;
+}

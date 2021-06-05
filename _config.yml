@@ -1,12 +1,124 @@
-title: Simply Jekyll
-name: John Doe
-user_description: Programmer (Interested in Philosophy and Math)
-notes_url: "https://simply-jekyll.netlify.app"
-profile_pic: /assets/img/profile.png
-favicon: /assets/img/favicon.png
-copyright_name: John Doe
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://simply-jekyll.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.raghuveer.net" # the base hostname & protocol for your site, e.g. http://example.com
+
+#######################################################################
+# Settings related to the Header and your About page go here,such as 
+# your name, site name, profile pic, site tagline, your bio, 
+# your social media links etc
+#######################################################################
+
+heading: Simply Jekyll
+subheading: # subheading won't work without a tagline, 
+          # tagline is mandatory if you want the 
+          # suheading to appear. The reason is
+          # having a heading and a subheading looks 
+          # ridiculous.
+  enabled: true
+  name: Notes and Thoughts
+tagline: # subheading won't work without a tagline, 
+         # tagline is mandatory if you want the 
+         # suheading to appear. The reason is
+         # having a heading and a subheading looks 
+         # ridiculous.
+         # Although you can have the tagline without 
+         # the subheading to support the main heading
+         # which in this case is 'Knowledge Continuum'
+  enabled: true
+  name: An experiment to spark conversations
+copyright: 
+  year: 2020
+  msg: Raghuveer S # This is a mandatory attribute for copyright to be displayed
+
+user:
+  display: true # setting it to false will remove the header image and bio
+                # Note that user settings come wholesale, it does not have the 
+                # granular enabling or disabling as with the 'preferences'
+                # or the site-wide settings.
+  name: Raghuveer S
+  bio: Programmer ∪ Writer
+  email: raghu-veer@outlook.com
+  photo: /assets/img/profile.png
+  social: # just leave the field blank or type in null, if you don't have a
+          # particular social media account and it won't appear
+    enabled: false  # turn this to true
+    twitter: raghuveerdotnet
+    github: raghuveerdotnet 
+    youtube: raghuveerdotnet 
+    linkedin: raghuveerdotnet  
+    twitch: null
+    facebook: null 
+    instagram: null
+
+
+
+#####################################################################
+# Settings related to your preferences go here, such as the
+# search results, wiki-style-links, sidenotes, marginnotes, 
+# transclusion, pagepreview, backlinks, related posts, highlighting, 
+# context menu, flashcards, sliding window, wrapping
+#####################################################################
+preferences:
+  search:
+    enabled: true
+    shortcut_hint: 
+        enabled: true
+    results:
+      length: 4 # This is number of search result entries you see when you type something
+  wiki_style_link: # This property handles wiki style links '[['
+    enabled: true
+  sidenotes: 
+    enabled: true
+  transclusion:
+    enabled: true
+  image:
+    enabled: true
+  pagepreview:
+    enabled: true
+  highlighting:
+    enabled: true
+    color: DAEDFF # Takes hexadecimal and basic names like white, red, etc. 
+                  # Do not add '#'(the pound symbol) before the hexadecimal number.
+                  # In yml, it is considered as a comment
+  backlinks:
+    enabled: true
+  related:
+    enabled: true # This enables the posts that are related to each other by tags
+  wrapping:
+    enabled: true
+  contextmenu:
+    enabled: true
+    copylink: 
+      enabled: true
+    newtab: 
+      enabled: true
+    backlinks: 
+      enabled: true
+    related: 
+      enabled: true
+  flashcards:
+    enabled: true
+
 encoding: utf-8
 
 # Build settings
@@ -14,38 +126,52 @@ theme: null
 plugins:
   - jekyll-feed 
   - jekyll-sitemap 
+  - jekyll-tidy
+
+# Disqus Comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: raghuveerdotnet
 
 markdown: kramdown
 
 kramdown:
   input: GFM
   hard_wrap: false
-  math_engine: mathjax
+  math_engine: katex
   smart_quotes: ["apos", "apos", "quot", "quot"]
   syntax_highlighter: rouge
-
+  
 sass:
   style: compressed
-
-collections:
-    notes:
-      output: true
-      permalink: /notes/:title
-
-disqus:
-  shortname: raghuveerdotnet
 
 defaults:
   - scope:
       path: ""
       type: posts
     values:
-      layout: post
+      layout: Post
       permalink: /posts/:title
       content-type: post
-  - scope:
-      path: ""
-      type: notes
-    values:
-      layout: post
-      content-type: notes
+
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: Post
 title: By Date
 permalink: /dates/
 content-type: eg

@@ -1,165 +1,224 @@
-{%- if page.content-type == "notes" or page.permalink == "/notes" -%}
-<header>
-    <div class="notes-page-subheader disable-select">
-        <div class="notes-page-site-heading">
-            <p><a href="/index.html">{{site.title}}</a></p>
-        </div>
-        
-        <div class="notes-page-main-heading">
-            <p class="notes-page-heading"><a href="/notes">Notes and Thoughts</a></p>
-            <p class="notes-page-tagline">The journey from raw thoughts to <a href="/">blogposts</a></p>
-        </div>
-    </div>
-    <div class="searchbar search-container">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <label for="search-input"></label>
-        <input type="text" oninput="changeResultContainerDisp(this.value)" id="search-input" autocomplete="off" placeholder="Search Notes..."/>
-        <ul id="results-container"></ul>
-    </div>
-    <script src="/assets/js/simple-jekyll-search.min.js"></script>
-    <script>
-        function changeResultContainerDisp(val) {
-            if (val) {
-                document.getElementById("results-container").style.display = "block";
-                document.getElementById("search-input").addEventListener('blur', function() {
-                    document.addEventListener('click', function(event) {
-                        var isClickInside = document.getElementById("results-container").contains(event.target);
-                        if (!isClickInside) {
-                            document.getElementById("results-container").style.display = "none";
-                        }
-                    })
-                }) 
-            }  else {
-                document.getElementById("results-container").style.display = "none";
-            }
-        }
-        var sjs = SimpleJekyllSearch({
-                    searchInput: document.getElementById('search-input'),
-                    resultsContainer: document.getElementById('results-container'),
-                    json: '/search_notes.json',
-                    searchResultTemplate: '<li class="search_res" style="list-style: none;"><a href="{{ site.url }}{url}" style="text-decoration: none; color: #333333;"><p style="font-size: 1.0rem; font-family: "Inter !important"; font-weight: 600;">{title}</p></a></li>',
-                    noResultsText: 'No results found',
-                    fuzzy: false,
-                    limit: 4
-                    })   
-    </script>
-    {%- if page.permalink == "/notes" -%}
-    <div class="notes-page-subheader disable-select" id="scroll-head" onclick="window.location.assign('/');">
-        <div class="back-icon">
-            <svg class="ripple" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
-            </svg>
-        </div>
-        <p class="back-p">Home</p>
-    </div>
-    {%- else -%}
-    <div class="notes-page-subheader disable-select" id="scroll-head" onclick="window.location.assign('/notes');">
-        <div class="back-icon">
-            <svg class="ripple" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
-            </svg>
-        </div>
-        <p class="back-p">Notes</p>
-    </div>
-    {%- endif -%}
-</header>
-{%- else -%}
+{%- comment -%}
+*
+* MIT License
+* Copyright (c) 2020 Raghuveer S
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* File: Header.html
+* Author@Raghuveer S
+*
+* This file contains the markup for the site heading, subheading, user description, 
+*  user avatar, searchbar, site tagline.
+*
+{%- endcomment -%}
+
 <header>
     <div class="dashboard disable-select">
-        <div class="site-heading profile-board-col">
-           <h4 class="medium"><a href="/">{{site.title}}</a></h4>
+        {%- assign header_direction = 'site-heading-rtl' -%}
+        {%- assign userboard_display = 'show' -%}
+        {%- assign main_heading_size = 'medium-small' -%}
+        {%- assign main_heading_margin = 'margin-top-0' -%}
+        {%- assign userboard_margin = 'margin-top-0' -%}
+        {%- assign avatar_margin = 'margin-top-0' -%}
+        {%- assign menu_margin = 'margin-top-0' -%}
+
+        {%- if site.tagline.enabled -%}
+            {%- if site.subheading.enabled != true -%}
+                {%- assign main_heading_size = 'medium' -%}
+                {%- assign main_heading_margin = 'margin-top-30' -%}
+            {%- endif -%}
+        {%- else -%}
+            {%- assign main_heading_size = 'medium' -%}
+            {%- assign main_heading_margin = 'margin-top-30' -%}
+            {%- assign userboard_margin = 'margin-top-10-neg' -%}
+            {%- assign avatar_margin = 'margin-top-10-neg' -%}
+            {%- assign menu_margin = 'margin-top-10-neg' -%}
+        {%- endif -%}
+        
+        {%- if site.user.display != true -%}
+            {%- assign header_direction = 'site-heading-ltr' -%}
+        {%- endif -%}
+        {%- if page.content-type == "post" -%}
+            {%- assign header_direction = 'site-heading-ltr' -%}
+            {%- assign userboard_display = 'hide' -%}
+        {%- endif -%}
+
+        <div class="{{header_direction}} profile-board-col">
+           <p class="main-page-heading {{main_heading_size}} {{main_heading_margin}}"><a href='/'>{{site.heading}}</a></p>
+           {%- if site.tagline.enabled -%}
+             {%- if site.subheading.enabled -%}
+                <h4 class="main-page-subheading medium"><a href="/">{{site.subheading.name}}</a></h4>
+             {%- endif -%}
+             <p class="main-page-tagline">{{site.tagline.name}}</p>
+            {%- endif -%}
         </div>
-        <div class="userboard profile-board-col">
+        {%- if site.user.display and userboard_display == 'show' -%}
+        <div class="userboard {{userboard_margin}} profile-board-col">
             <div class="username">
-                <p class="title-sans"><a href="/about" style="text-decoration: none;">{{site.name}}</a></p>
+                <p class="title-sans"><a href="/about/" style="text-decoration: none;">{{site.user.name}}</a></p>
             </div>
             <div class="userdesc">
-                <p class="title-sans">{{site.user_description}}</p>
+              <p class="title-sans">{{site.user.bio}}</p>
+
+              {%- if site.user.social.enabled -%}
+              <p class="very-small title-sans">
+                  {%- if site.user.social.twitter != nil and site.user.social.twitter != empty and site.user.social.twitter != null -%}
+                        <span><a href="https://twitter.com/{{site.user.social.twitter}}"><svg width="15.5" height="14.5" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23 2C22.0424 2.67548 20.9821 3.19211 19.86 3.53C19.2577 2.83751 18.4573 2.34669 17.567 2.12393C16.6767 1.90116 15.7395 1.9572 14.8821 2.28445C14.0247 2.61171 13.2884 3.1944 12.773 3.95372C12.2575 4.71303 11.9877 5.61234 12 6.53V7.53C10.2426 7.57557 8.50127 7.18581 6.93101 6.39545C5.36074 5.60508 4.01032 4.43864 3 3C3 3 -1 12 8 16C5.94053 17.398 3.48716 18.0989 1 18C10 23 21 18 21 6.5C20.9991 6.22145 20.9723 5.94359 20.92 5.67C21.9406 4.66349 22.6608 3.39271 23 2V2Z"
+                                fill="#555555" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a></span>&nbsp;&nbsp;&nbsp;
+                  {%- endif -%}
+                {%- if site.user.social.github != nil and site.user.social.github != empty and site.user.social.github != null -%}
+                <span><a href="https://github.com/{{site.user.social.github}}"><svg width="13.5" height="14.5" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 19C3 20.5 3 16.5 1 16L8 19ZM15 22V18.13C15.0375 17.6532 14.9731 17.1738 14.811 16.7238C14.6489 16.2738 14.3929 15.8634 14.06 15.52C17.2 15.17 20.5 13.98 20.5 8.52C20.4997 7.12383 19.9627 5.7812 19 4.77C19.4559 3.54851 19.4236 2.19835 18.91 0.999999C18.91 0.999999 17.73 0.649999 15 2.48C12.708 1.85882 10.292 1.85882 8 2.48C5.27 0.649999 4.09 0.999999 4.09 0.999999C3.57638 2.19835 3.54414 3.54851 4 4.77C3.03013 5.7887 2.49252 7.14346 2.5 8.55C2.5 13.97 5.8 15.16 8.94 15.55C8.611 15.89 8.35726 16.2954 8.19531 16.7399C8.03335 17.1844 7.96681 17.6581 8 18.13V22"
+                        fill="#555555" />
+                    <path
+                        d="M15 22V18.13C15.0375 17.6532 14.9731 17.1738 14.811 16.7238C14.6489 16.2738 14.3929 15.8634 14.06 15.52C17.2 15.17 20.5 13.98 20.5 8.52C20.4997 7.12383 19.9627 5.7812 19 4.77C19.4559 3.54851 19.4236 2.19835 18.91 0.999999C18.91 0.999999 17.73 0.649999 15 2.48C12.708 1.85882 10.292 1.85882 8 2.48C5.27 0.649999 4.09 0.999999 4.09 0.999999C3.57638 2.19835 3.54414 3.54851 4 4.77C3.03013 5.7887 2.49252 7.14346 2.5 8.55C2.5 13.97 5.8 15.16 8.94 15.55C8.611 15.89 8.35726 16.2954 8.19531 16.7399C8.03335 17.1844 7.96681 17.6581 8 18.13V22M8 19C3 20.5 3 16.5 1 16L8 19Z"
+                        stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></a></span>&nbsp;&nbsp;&nbsp;
+                {%- endif -%}
+                {%- if site.user.social.twitch != nil and site.user.social.twitch != empty and site.user.social.twitch != null -%}
+                <span><a href="https://twitch.tv/{{site.user.social.twitch}}"><svg width="15.5" height="14.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 2H3V18H8V22L12 18H17L21 14V2ZM16 11V7Z" fill="#555555" />
+                    <path d="M11 11V9V7M16 11V7M21 2H3V18H8V22L12 18H17L21 14V2Z" stroke="#555555" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M11 6C10.3163 6.0468 10.0168 6.19815 10 7V11C10.064 11.7162 10.242 11.9785 11 12C11.7256 11.9887 11.953 11.7536 12 11V7C11.987 6.25544 11.7505 6.04739 11 6Z"
+                        fill="white" stroke="#555555" stroke-width="0.5" />
+                    <path
+                        d="M16 6C15.3163 6.0468 15.0168 6.19815 15 7V11C15.064 11.7162 15.242 11.9785 16 12C16.7256 11.9887 16.953 11.7536 17 11V7C16.987 6.25544 16.7505 6.04739 16 6Z"
+                        fill="white" stroke="#555555" stroke-width="0.5" />
+                </svg></a></span>&nbsp;&nbsp;&nbsp;
+                {%- endif -%}
+                {%- if site.user.social.youtube != nil and site.user.social.youtube != empty and site.user.social.youtube != null -%}
+                <span><a href="https://youtube.com/{{site.user.social.youtube}}"><svg width="13.5" height="14.5" viewBox="0 0 24 24" fill="#555" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 0.999999 11.75C0.988779 13.537 1.14277 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0112 9.96295 22.8572 8.1787 22.54 6.42V6.42Z"
+                        stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" fill='#fff' stroke="#fff" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></a></span>&nbsp;&nbsp;&nbsp;
+                {%- endif -%}
+                {%- if site.user.social.linkedin != nil and site.user.social.linkedin != empty and site.user.social.linkedin != null -%}
+                <span><a href="https://linkedin.com/in/{{site.user.social.linkedin}}"><svg width="14.5" height="14.5" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 8.5C17.5913 8.5 19.1174 9.13214 20.2426 10.2574C21.3679 11.3826 22 12.9087 22 14.5V21.5H18V14.5C18 13.9696 17.7893 13.4609 17.4142 13.0858C17.0391 12.7107 16.5304 12.5 16 12.5C15.4696 12.5 14.9609 12.7107 14.5858 13.0858C14.2107 13.4609 14 13.9696 14 14.5V21.5H10V14.5C10 12.9087 10.6321 11.3826 11.7574 10.2574C12.8826 9.13214 14.4087 8.5 16 8.5V8.5Z"
+                        fill="#555555" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6 9.5H2V21.5H6V9.5Z" fill="#555555" stroke="#555555" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M4 6.5C5.10457 6.5 6 5.60457 6 4.5C6 3.39543 5.10457 2.5 4 2.5C2.89543 2.5 2 3.39543 2 4.5C2 5.60457 2.89543 6.5 4 6.5Z"
+                        fill="#555555" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></a></span>&nbsp;&nbsp;&nbsp;
+                {%- endif -%}
+                {%- if site.user.social.facebook != nil and site.user.social.facebook != empty and site.user.social.facebook != null -%}
+                <span><a href="https://facebook.com/{{site.user.social.facebook}}"><svg width="13" height="14.5" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V9H1V13H4V21H8V13H11L12 9H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1Z"
+                        fill="#555555" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></a></span>&nbsp;&nbsp;&nbsp;
+                {%- endif -%}
+                {%- if site.user.social.instagram != nil and site.user.social.instagram != empty and site.user.social.instagram != null -%}
+                <span><a href="https://instagram.com/{{site.user.social.instagram}}"><svg width="14.5" height="14.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z"
+                        fill="#555555" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7616 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z"
+                        fill="white" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.5 6.5H17.51" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></a></span>&nbsp;&nbsp;&nbsp;
+                {%- endif -%}
+              </p>
+              {%- endif -%}
             </div> 
-            <div class="link-to-notes">
-                <svg height="16" width="15" viewBox="0 0 24 24" class="anchor-link">
-                    <path d="M11.96 14.945c-.067 0-.136-.01-.203-.027-1.13-.318-2.097-.986-2.795-1.932-.832-1.125-1.176-2.508-.968-3.893s.942-2.605 2.068-3.438l3.53-2.608c2.322-1.716 5.61-1.224 7.33 1.1.83 1.127 1.175 2.51.967 3.895s-.943 2.605-2.07 3.438l-1.48 1.094c-.333.246-.804.175-1.05-.158-.246-.334-.176-.804.158-1.05l1.48-1.095c.803-.592 1.327-1.463 1.476-2.45.148-.988-.098-1.975-.69-2.778-1.225-1.656-3.572-2.01-5.23-.784l-3.53 2.608c-.802.593-1.326 1.464-1.475 2.45-.15.99.097 1.975.69 2.778.498.675 1.187 1.15 1.992 1.377.4.114.633.528.52.928-.092.33-.394.547-.722.547z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.27 22.054c-1.61 0-3.197-.735-4.225-2.125-.832-1.127-1.176-2.51-.968-3.894s.943-2.605 2.07-3.438l1.478-1.094c.334-.245.805-.175 1.05.158s.177.804-.157 1.05l-1.48 1.095c-.803.593-1.326 1.464-1.475 2.45-.148.99.097 1.975.69 2.778 1.225 1.657 3.57 2.01 5.23.785l3.528-2.608c1.658-1.225 2.01-3.57.785-5.23-.498-.674-1.187-1.15-1.992-1.376-.4-.113-.633-.527-.52-.927.112-.4.528-.63.926-.522 1.13.318 2.096.986 2.794 1.932 1.717 2.324 1.224 5.612-1.1 7.33l-3.53 2.608c-.933.693-2.023 1.026-3.105 1.026z" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <a href="/notes">{{site.notes_url}}/notes</a>
-            </div>
         </div>
+        {%- endif -%}
     </div>
-    <div class="avatar disable-select" title="click me to know more">
+    {%- if site.user.display and userboard_display == 'show' -%}
+    <div class="avatar {{avatar_margin}} disable-select" title="click me to know more">
         <a class="avatar-link" href="/about">
-            <img src="/assets/img/profile.png" class="avatar-img" alt="avatar"/>
+            <img src="{{site.user.photo}}" class="avatar-img" alt="avatar"/>
         </a>
     </div>
+    {%- endif -%}
     <div class="main-site-subheader menu disable-select">
-        <div class="home">
-            <a style="text-decoration: none;" href="/about">
-                <svg class="icon-home" width="18" height="19" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.9777 21.6138V19.6138C20.9777 18.553 20.5563 17.5356 19.8061 16.7854C19.056 16.0353 18.0386 15.6138 16.9777 15.6138H8.97768C7.91682 15.6138 6.8994 16.0353 6.14926 16.7854C5.39911 17.5356 4.97768 18.553 4.97768 19.6138V21.6138"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.9777 11.6138C15.1868 11.6138 16.9777 9.82298 16.9777 7.61385C16.9777 5.40471 15.1868 3.61385 12.9777 3.61385C10.7685 3.61385 8.97768 5.40471 8.97768 7.61385C8.97768 9.82298 10.7685 11.6138 12.9777 11.6138Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <a class="menu-item" href="/about">
+                <svg class="menu-item-icon" width="18" height="19" viewBox="0 0 25 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.9777 21.6138V19.6138C20.9777 18.553 20.5563 17.5356 19.8061 16.7854C19.056 16.0353 18.0386 15.6138 16.9777 15.6138H8.97768C7.91682 15.6138 6.8994 16.0353 6.14926 16.7854C5.39911 17.5356 4.97768 18.553 4.97768 19.6138V21.6138"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M12.9777 11.6138C15.1868 11.6138 16.9777 9.82298 16.9777 7.61385C16.9777 5.40471 15.1868 3.61385 12.9777 3.61385C10.7685 3.61385 8.97768 5.40471 8.97768 7.61385C8.97768 9.82298 10.7685 11.6138 12.9777 11.6138Z"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <p class="home-p">About</p>  
-            </a>
-        </div>
-        <div class="categories">
-            <a style="text-decoration: none;" href="/tags">
-            <svg class="icon-category" width="18" height="19" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 9.5H20"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4 15.5H20"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M10 3.5L8 21.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M16 3.5L14 21.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                               
-            <p class="categories-p">Tags</p>
-            </a>
-        </div>
-        <div class="rss">
-            <a style="text-decoration: none;" href="/feed.xml">
-                <svg class="icon-rss" width="18" height="19" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 11.5C6.38695 11.5 8.67613 12.4482 10.364 14.136C12.0518 15.8239 13 18.1131 13 20.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4 4.5C8.24346 4.5 12.3131 6.18571 15.3137 9.18629C18.3143 12.1869 20 16.2565 20 20.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M5 20.5C5.55228 20.5 6 20.0523 6 19.5C6 18.9477 5.55228 18.5 5 18.5C4.44772 18.5 4 18.9477 4 19.5C4 20.0523 4.44772 20.5 5 20.5Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>    
-            <p class="rss-p">RSS</p>
-            </a>
-        </div>
+                <p class="menu-item-text">About</p>
+        </a>
+        <a class="menu-item" href="/tags">
+                <svg class="menu-item-icon" width="18" height="19" viewBox="0 0 24 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 9.5H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 15.5H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10 3.5L8 21.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 3.5L14 21.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="menu-item-text">Tags</p>
+        </a>
+        <a class="menu-item" href="/feed.xml">
+                <svg class="menu-item-icon" width="18" height="19" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 11.5C6.38695 11.5 8.67613 12.4482 10.364 14.136C12.0518 15.8239 13 18.1131 13 20.5"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 4.5C8.24346 4.5 12.3131 6.18571 15.3137 9.18629C18.3143 12.1869 20 16.2565 20 20.5"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M5 20.5C5.55228 20.5 6 20.0523 6 19.5C6 18.9477 5.55228 18.5 5 18.5C4.44772 18.5 4 18.9477 4 19.5C4 20.0523 4.44772 20.5 5 20.5Z"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="menu-item-text">RSS</p>
+        </a>
     </div>
+    {%- if site.preferences.search.enabled -%}
     <div class="searchbar search-container">
-        <i class="fa fa-search" aria-hidden="true"></i>
+      <svg class="search-icon" width="19" height="19" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.5 19.5C15.9183 19.5 19.5 15.9183 19.5 11.5C19.5 7.08172 15.9183 3.5 11.5 3.5C7.08172 3.5 3.5 7.08172 3.5 11.5C3.5 15.9183 7.08172 19.5 11.5 19.5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21.5 21.5L17.15 17.15"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        {%- if site.preferences.search.shortcut_hint.enabled -%}
+        <div class="search-shortcut disable-select">
+            <kbd class="disable-select">Shift</kbd>
+            <kbd class="disable-select">s</kbd>
+        </div>
+        {%- endif -%}
         <label for="search-input"></label>
-        <input type="text" oninput="changeResultContainerDisp(this.value)" id="search-input" autocomplete="off" placeholder="Search Simply Jekyll..."/>
-        <ul id="results-container"></ul>
+        <input type="text" id="search-input" autocomplete="off" placeholder="Search {{site.heading}}..."/>
+        <div id="search-results" class="search-results"></div>
     </div>
-    <script src="/assets/js/simple-jekyll-search.min.js"></script>
-    <script>
-        function changeResultContainerDisp(val) {
-            if (val) {
-                document.getElementById("results-container").style.display = "block";
-                document.getElementById("search-input").addEventListener('blur', function() {
-                    document.addEventListener('click', function(event) {
-                        var isClickInside = document.getElementById("results-container").contains(event.target);
-                        if (!isClickInside) {
-                            document.getElementById("results-container").style.display = "none";
-                        }
-                    })
-                }) 
-            }  else {
-                document.getElementById("results-container").style.display = "none";
-            }
-        }
-        var sjs = SimpleJekyllSearch({
-                    searchInput: document.getElementById('search-input'),
-                    resultsContainer: document.getElementById('results-container'),
-                    json: '/search.json',
-                    searchResultTemplate: '<li class="search_res" style="list-style: none;"><a href="{{ site.url }}{url}" style="text-decoration: none; color: #555555;"><p style="font-size: 1.0rem; font-family: "Inter !important"; font-weight: 600;">{title}</p></a></li>',
-                    noResultsText: 'No results found',
-                    fuzzy: false,
-                    limit: 4
-                    })   
-    </script>
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+    <script src="/assets/js/Search.js"></script>
+    {%- endif -%}
     {%- if page.permalink != "/" -%}
-    <div class="main-site-subheader disable-select" id="scroll-head" onclick="window.location.assign('/');">
-        <div class="back-icon">
+    <div class="main-site-subheader disable-select" id="scroll-head">
+        <div class="back-icon" onclick="window.location.assign('/');">
             <svg class="ripple" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                 <path d="M0 0h24v24H0z" fill="none"/>
                 <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
@@ -169,4 +228,4 @@
     </div>
     {%- endif -%}
 </header>
-{%- endif -%}
+

@@ -1,0 +1,17 @@
+---
+permalink: /assets/js/SearchData.json
+---
+
+{
+  {%- assign i = 0 -%}
+  {%- for post in site.posts -%}
+
+    "{{ i }}": {
+       "doc":  {{ post.title | strip_html | escape | jsonify }},
+       "title": {{ post.title | strip_html | escape | jsonify }},
+       "content": {{ post.content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | strip_html | strip_newline | strip | escape | jsonify }},
+       "url": "{{ post.url }}"
+    }{%- unless forloop.last -%},{%- endunless -%}{%- assign i = i | plus: 1 -%}
+    
+  {% endfor %}
+}

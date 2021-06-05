@@ -1,13 +1,37 @@
+{%- comment -%}
+ *
+ * MIT License
+ * Copyright (c) 2020 Raghuveer S
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+ * File: Backlinks.html
+ * Author@Raghuveer S
+ *
+ * This file contains the markup for the links that refer back to this file.
+ * You can find the final thing at the end of every post inside a small greyish box
+ *
+{%- endcomment -%}
+
 <!-- Add backlinks to the current page --> 
 {%- assign link_count = 0 -%}
 {%- assign wiki_link_title = '[' | append: page.title | append: ']' -%}
-{%- for note in site.notes -%}
-        {%- if note.url != page.url -%}
-            {%- if note.content contains wiki_link_title -%}
-                {%- assign link_count = link_count | plus:1 -%}
-            {%- endif -%}
-    {%- endif -%}
-{%- endfor -%}
 {%- for note in site.posts -%}
         {%- if note.url != page.url -%}
             {%- if note.content contains wiki_link_title -%}
@@ -24,19 +48,13 @@
 {%- endfor -%}
 {%- if link_count > 0 -%}
 {%- assign wiki_link_title = '[' | append: page.title | append: ']' -%}
-<div class="related" id="jekyll-seamless-backlinks">
-    <h4 class="medium-small">Linked References</h4>
+{%- assign display_class = 'hide' -%}
+{%- if site.preferences.backlinks.enabled -%}
+{%- assign display_class = 'show' -%}
+{%- endif -%}
+<div class="related {{display_class}}" id="jekyll-seamless-backlinks">
+    <h4 class="medium-small">Links to this note</h4>
     <div class="related-wrapper">
-        {%- for note in site.notes -%}
-        {%- if note.url != page.url -%}
-            {%- if note.content contains wiki_link_title -%}
-            <div class="related-group"><a href="{{note.url}}">
-                <p class="related-title">{{ note.title }}</p>
-                <p class="related-excerpt">{{ note.content | markdownify | strip_html | truncate: 140 }}</p>
-            </a></div>
-            {%- endif -%}
-        {%- endif -%}
-        {%- endfor -%}
         {%- for note in site.posts -%}
         {%- if note.url != page.url -%}
             {%- if note.content contains wiki_link_title -%}
