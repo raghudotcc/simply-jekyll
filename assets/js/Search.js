@@ -193,7 +193,7 @@
             }
 
             function addResult(resultsList, result) {
-                console.log(result);
+                
                 var doc = docs[result.ref];
                 var resultsListItem = document.createElement('li');
                 resultsListItem.classList.add('search-results-list-item');
@@ -214,7 +214,7 @@
 
                 resultTitle.appendChild(resultDoc);
 
-                console.log("Added svg to the result doc")
+                
                 var resultDocTitle = document.createElement('div');
                 resultDocTitle.classList.add('search-result-doc-title');
                 resultDocTitle.innerHTML = doc.doc;
@@ -222,7 +222,7 @@
                 var resultDocOrSection = resultDocTitle;
                 
                 if (doc.doc != doc.title) {
-                    console.log("Added subheadings and other forms of links to the doc")
+                    
                     resultDoc.classList.add('search-result-doc-parent');
                     var resultSection = document.createElement('div');
                     resultSection.classList.add('search-result-section');
@@ -232,7 +232,7 @@
                 }
 
 
-                console.log("Going to add the metadata");
+                
                 var metadata = result.matchData.metadata;
                 var titlePositions = [];
                 var contentPositions = [];
