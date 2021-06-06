@@ -393,27 +393,29 @@
                 e.preventDefault();
                 var active = document.querySelector('.search-result.active');
                 if (active) {
-                active.classList.remove('active');
-                if (active.parentElement.previousSibling) {
-                    var previous = active.parentElement.previousSibling.querySelector('.search-result');
-                    previous.classList.add('active');
-                }
+                    active.classList.remove('active');
+                    if (active.parentElement.previousSibling) {
+                        var previous = active.parentElement.previousSibling.querySelector('.search-result');
+                        previous.classList.add('active');
+                        previous.scrollIntoView(false);
+                    }
                 }
                 return;
             case 40: // arrow down
                 e.preventDefault();
                 var active = document.querySelector('.search-result.active');
                 if (active) {
-                if (active.parentElement.nextSibling) {
-                    var next = active.parentElement.nextSibling.querySelector('.search-result');
-                    active.classList.remove('active');
-                    next.classList.add('active');
-                }
+                    if (active.parentElement.nextSibling) {
+                        var next = active.parentElement.nextSibling.querySelector('.search-result');
+                        active.classList.remove('active');
+                        next.classList.add('active');
+                        next.scrollIntoView(false);
+                    }
                 } else {
                 var next = document.querySelector('.search-result');
-                if (next) {
-                    next.classList.add('active');
-                }
+                    if (next) {
+                        next.classList.add('active');
+                    }
                 }
                 return;
             case 13: // enter

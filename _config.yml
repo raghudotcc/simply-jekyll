@@ -83,8 +83,6 @@ preferences:
     enabled: true
     shortcut_hint: 
         enabled: true
-    results:
-      length: 4 # This is number of search result entries you see when you type something
   wiki_style_link: # This property handles wiki style links '[['
     enabled: true
   sidenotes: 
