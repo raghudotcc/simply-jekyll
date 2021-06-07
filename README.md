@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-<img src="./assets/img/end_result.png">
+<img src="./assets/img/feed.png">
 </p>
 
 ## Feature Overview
