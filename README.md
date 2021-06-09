@@ -15,10 +15,6 @@
     <br><br><br>
 </p>
 
-<p align="center">
-<img src="./assets/img/feed.png">
-</p>
-
 ## Feature Overview
 
 [View the documentation(f)](https://simply-jekyll.netlify.app/posts/explore) for feature information.
