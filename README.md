@@ -6,13 +6,12 @@
 <br><br>
 
 
+
 <p align="center">
-    <p align="center">
-    <img width="250px" src="./assets/img/logo.png">
-    </p><hr>
-    <p align="center">Simply Jekyll is a simple yet highly functional jekyll-based theme that combines the best of different worlds. It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.</p>
+    <img align="left" width="250px" src="./assets/img/logo.png">
+    <p><strong>Simply Jekyll</strong> is a simple yet highly functional jekyll-based theme that combines the best of different worlds. It is a minimal and distraction free theme that strives to provide maximum value all without holding back on any essential features that a user would benefit from or would desire for. This is an evolving project and is garanteed to be maintained at least for quite some time as I myself am a beneficiary of this theme and the project.</p><br><hr>
     <p align="center"><strong><a href="https://simply-jekyll.netlify.app/">See it in action!</a></strong></p>
-    <br><br><br>
+    <img align="center" src="./assets/img/end_result.png">
 </p>
 
 ## Feature Overview
