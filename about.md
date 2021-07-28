@@ -45,11 +45,11 @@ content-type: eg
 \- 12-10-19 Searchbar. <br/>
 ::rmn]]The original design[[**Original Design**<br><img src="/assets/img/firstdesign.jpg">::lsn]] of this website was a lot more ostentatious than what you see here. As I progressed through the development process of this website, the current design started emerging on its own. For reasons I don't even understand, the current design just started feeling more natural than the one I had in my mind initially. The bare and simple look-n-feel of this site, at least to me, encompasses the essence of all the things I love about the sites I frequently visit --- feed-like structure, previews, search with context, contextual backlinks, sidenotes, etc. I am hopeful that you'll love it too. :)
 
-- **Page preview** (Move your mouse over the link): [[Adlerian Teleological Thinking and A Simplified Life]]
+- **Page preview** (Move your mouse over the link): [[Lorem ipsum dolor sit amet]]
 - **Transclusion**: Allows you to see a partial view of the contents of the website to the right or the left of the margin.
 - **Sidenotes** (Changelog you see on the left is an example of this).
 - **Wiki-style link:** Usually wikis allow you to specify links using double bracket, I added it here using liquid. Also added bad-link highlighting
-   - Good link: [[Adlerian Teleological Thinking and A Simplified Life]]
+   - Good link: [[Lorem ipsum dolor sit amet]]
    - Bad link: [[Title of a page that doesn't exist]]
 
 

@@ -424,36 +424,26 @@ hr {
     margin-top: -13px;
 }
 
-.userdesc p:nth-child(1) {
+.bio {
     font-size: 14.5px;
 }
 
-.userdesc p:nth-child(2) {
+.alt_link {
+    margin-top: -12px;
+    font-size: 13px !important;
+    display: flex;
+    flex-direction: row;
+}
+
+.alt_link a {
+    text-decoration: none;
+    padding-left: 3px;
+    color: var(--anchor-text-color);
+}
+
+.social {
     margin-top: -9px;
     font-size: 13px !important;
-}
-
-.link-to-notes {
-    padding-left: 20px;
-    margin-top: -12px;
-    padding-bottom: 8px;
-}
-
-.link-to-notes a {
-    color: var(--anchor-text-color);
-    text-decoration: none;
-    font-family: var(--primary-font-family);
-    font-size: 13px;
-    margin-left: -3px;
-}
-
-.link-to-notes a:hover {
-    text-decoration: underline;
-}
-
-.link-to-notes a, .link-to-notes svg {
-    vertical-align: middle;
-    display: inline-block;
 }
 
 .anchor-link {
