@@ -1,12 +1,12 @@
-title: notenote.link
-name: My linked notebook
+title: Asura's IOI notes
+name: Notes, ideas, concepts related to IOI
 user_description: notenote.link
-notes_url: "https://notenote.link.netlify.app"
-profile_pic: /assets/img/profile.png
-favicon: /assets/img/favicon.png
+notes_url: "https://ioi-notes.netlify.app"
+profile_pic: /assets/static_img/profile.png
+favicon: /assets/static_img/favicon.png
 copyright_name: MIT
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://notenote.link.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ioi-notes.netlify.app/" # the base hostname & protocol for your site, e.g. http://example.com
 encoding: utf-8
 
 # Build settings

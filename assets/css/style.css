@@ -1464,5 +1464,5 @@ label.margin-toggle:not(.sidenote-number) {
     display: none;
 }
 [id]:hover > a {
-    display: inline;
+    display: contents;
 }
