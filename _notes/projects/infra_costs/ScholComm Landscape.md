@@ -32,7 +32,7 @@ Characteristics: Goals and purpose of OSI, Target audience, Technical openness, 
 Relevant project outcomes: 
 
 - [_Living Our Values and Principles: Exploring Assessment Strategies for the Scholarly Communication Field_ (October 2020)](https://educopia.org/living-our-values-and-principles/)
-- [Scholarly Communication Technology Catalogue (February 2021)](https://www.scomcat.net/) (see [[../framework/Defining OI#Scholarly Communication Technology Catalogue SComCat | this entry]])
+- [Scholarly Communication Technology Catalogue (February 2021)](https://www.scomcat.net/) (see [[../framework/Defining OI#Scholarly Communication Technology Catalogue SComCat \| this entry]])
 - [_Library Publishing Infrastructure: Assembling New Solutions_ (March 2021)](https://educopia.org/nglp-lib-pub-infrastructure/)
 - [Living Our Values and Principles: Annotated Bibliography (June 2021)](https://educopia.org/nglp-bibliography/)
 - [Values and Principles Framework (draft issued for public review, August-September 2020)](https://doi.org/10.21428/6ffd8432.5175bab1)

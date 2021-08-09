@@ -32,7 +32,8 @@ See [[Defining OI]] for a high-level overview of what counts as open infrastruct
 - Mission-driven and community measured
 - Project time vs infratructure time
 
-### Legal
+
+### Openness
 
 - Accessible and available source code
 - Accessible and available data

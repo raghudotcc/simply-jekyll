@@ -27,6 +27,8 @@ Local and global community
 
 > We define _infrastructure_ as the systems, protocols, and software that research and scholarship rely on.
 
+
+
 Related notes of [[infrastructure]].
 
 ### Research and scholarship
