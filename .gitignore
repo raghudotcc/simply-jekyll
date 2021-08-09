@@ -5,3 +5,5 @@ _site
 vendor
 .idea
 .DS_Store
+
+_notes/.obsidian
