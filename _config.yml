@@ -59,14 +59,14 @@ user:
   bio: Programmer ∪ Writer. Interested in constraints and correspondences.
   email: raghu-veer@outlook.com
   photo: /assets/img/profile.png
-  alt_link: raghuveer.net
+  alt_link: rgvr.me
   social: # just leave the field blank or type in null, if you don't have a
           # particular social media account and it won't appear
     enabled: false  # turn this to true
-    twitter: raghuveerdotnet
-    github: raghuveerdotnet 
-    youtube: raghuveerdotnet 
-    linkedin: raghuveerdotnet  
+    twitter: rgvrme
+    github: rgvr 
+    youtube: rgvr 
+    linkedin: rgvr  
     twitch: null
     facebook: null 
     instagram: null
@@ -131,7 +131,7 @@ plugins:
 disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-    shortname: raghuveerdotnet
+    shortname: rgvr
 
 markdown: kramdown
 

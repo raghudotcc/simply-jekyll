@@ -40,11 +40,11 @@ Hopefully there will be an easier process soon.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/raghuveerdotnet/simply-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rgvr/simply-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ### Submitting code changes:
 
-- Open a [Pull Request](https://github.com/raghuveerdotnet/simply-jekyll/pulls)
+- Open a [Pull Request](https://github.com/rgvr/simply-jekyll/pulls)
 - Ensure all CI tests pass
 - Await code review
 
