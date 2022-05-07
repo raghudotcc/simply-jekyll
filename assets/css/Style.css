@@ -171,8 +171,7 @@ code {
     font-family: Consolas, 'Courier New', Courier, monospace;
     font-family: Consolas, 'Courier New', Courier, monospace;
     display: inline-block;
-    overflow: auto !important;
-    white-space: pre-line !important;       
+    overflow: auto !important;       
     word-wrap: break-word !important;       
     padding: 2px 2px  2px 2px;
     vertical-align:middle;
@@ -201,8 +200,7 @@ code {
 pre code {
     font-family: Consolas, 'Courier New', Courier, monospace;
     display: inline-block;
-    overflow: auto !important;
-    white-space: pre-line !important;       
+    overflow: auto !important;       
     word-wrap: break-word !important;       
     padding: 15px 15px  15px 15px;
     vertical-align:middle;
